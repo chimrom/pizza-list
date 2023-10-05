@@ -1,0 +1,20 @@
+.card {
+	display: flex;
+}
+
+.imgWrapper {
+	// position: relative;
+	width: 80px;
+	height: 80px;
+	flex-shrink: 0;
+	// z-index: 2;
+}
+
+.imgWrapper img {
+	// position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 30px;
+	object-fit: cover;
+	// z-index: 1;
+}
