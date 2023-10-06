@@ -13,7 +13,8 @@ export const PizzaList = () => {
 			: pizzaList.filter((el) => el.type.includes(currentType));
 
 	return (
-		<section>
+		<section className={classes.wrapper}>
+			<h2>Выберите пиццу</h2>
 			{groupPizza.map((el, index) => (
 				<img
 					src={el.img}
@@ -29,6 +30,7 @@ export const PizzaList = () => {
 						composition={el.composition}
 						price={el.price}
 						img={el.img}
+						type={el.type}
 						key={el.name}
 					/>
 				))}

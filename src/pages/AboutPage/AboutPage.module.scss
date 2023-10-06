@@ -5,3 +5,24 @@
 .heroImg {
 	width: 100%;
 }
+
+.title {
+	padding: 0 16px;
+}
+
+.title h1 {
+	margin-bottom: 8px;
+}
+.title p {
+	margin-bottom: 16px;
+}
+
+.title button {
+	width: 288px;
+	height: 52px;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	background: var(--E52D2D, #e52d2d);
+	margin-bottom: 60px;
+}

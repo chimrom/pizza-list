@@ -1,5 +1,10 @@
+.wrapper {
+	margin-bottom: 60px;
+}
+
 .pizzaList {
 	display: grid;
 	grid-template-columns: repeat(1, minmax(0, 1fr));
 	gap: 12px;
+	padding: 0 16px;
 }

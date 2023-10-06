@@ -1,6 +1,7 @@
 .imgList {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+	// grid-template-columns: repeat(2, 1fr);
 }
 
 .imgList img {
@@ -14,4 +15,8 @@
 	align-items: center;
 	color: #fff;
 	background: #000;
+}
+
+.bottomFooter svg path {
+	fill: #fff;
 }

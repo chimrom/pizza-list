@@ -8,6 +8,56 @@
 	box-shadow: 0px 2px 5px 0px rgba(165, 169, 176, 0.3);
 }
 
-.wrapper img {
+.pizzaImg {
 	width: 77px;
+}
+
+.imgsWrapper {
+	position: relative;
+	padding: 12px 0 0 12px;
+}
+
+.groupsList {
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
+}
+
+.groupsList img {
+	width: 12px;
+	height: 10px;
+}
+
+.buttonGroup {
+	display: flex;
+	width: 164px;
+	border-radius: 4px;
+	background: #eff0f1;
+}
+
+.button {
+	color: #82909f;
+	width: 100%;
+	height: 28px;
+
+	border: none;
+}
+
+.activeButton {
+	color: #000;
+	background: #fff;
+	margin: 2px;
+	border-radius: 2px;
+}
+
+.payButton {
+	width: 120px;
+	height: 28px;
+	border-radius: 5px;
+	color: #fff;
+	background: #e52d2d;
+	border: none;
 }

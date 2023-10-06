@@ -11,7 +11,7 @@ export const AboutPage = () => {
 			<div>
 				<img src={heroImg} alt="hero" className={classes.heroImg} />
 			</div>
-			<div>
+			<div className={classes.title}>
 				<h1>Пицца на заказ</h1>
 				<p>
 					Бесплатная и быстрая доставка за час в любое удобное для вас время
