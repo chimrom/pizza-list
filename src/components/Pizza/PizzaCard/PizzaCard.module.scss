@@ -1,139 +1,158 @@
 .wrapper {
-	display: flex;
-	align-items: start;
-	position: relative;
-	border-radius: 5px;
-	background: #fff;
-	box-shadow: 0px 2px 5px 0px rgba(165, 169, 176, 0.3);
-	@media (min-width: 576px) {
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: center;
-		padding: 20px;
-	}
+    display: flex;
+    align-items: start;
+    position: relative;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0px 2px 5px 0px rgba(165, 169, 176, 0.3);
+    @media (min-width: 576px) {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
 
-	&:hover {
-		.groupsList {
-			display: flex;
-		}
-		.name {
-			color: #e52d2d;
-		}
-	}
+    &:hover {
+        .groupsList {
+            display: flex;
+        }
+        .name {
+            color: #e52d2d;
+        }
+    }
 }
 
 .pizzaImg {
-	position: relative;
-	width: 77px;
-	z-index: 10;
-	@media (min-width: 576px) {
-		width: 212px;
-	}
+    position: relative;
+    width: 77px;
+    z-index: 10;
+    @media (min-width: 576px) {
+        width: 212px;
+    }
 }
 
 .imgsWrapper {
-	position: relative;
-	padding: 12px 0 0 12px;
+    position: relative;
+    padding: 12px 0 0 12px;
 
-	svg {
-		position: absolute;
-		top: 11px;
-		left: 13px;
-		width: 80%;
-		height: 80%;
-		z-index: 1;
-	}
+    svg {
+        position: absolute;
+        top: 11px;
+        left: 13px;
+        width: 80%;
+        height: 80%;
+        z-index: 1;
+    }
 
-	@media (min-width: 576px) {
-		padding: 0;
-	}
+    @media (min-width: 576px) {
+        padding: 0;
+        svg {
+            position: absolute;
+            top: 17px;
+            left: 17px;
+        }
+    }
 }
 
 .pizzaInfo {
-	display: flex;
-	flex-direction: column;
-	padding: 20px 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 6px;
 
-	p {
-		color: #848a9a;
-		font-size: 11px;
-		line-height: 16.5px;
-	}
-	@media (min-width: 576px) {
-		text-align: center;
-		align-items: center;
-		padding: 0;
-	}
+    p {
+        color: #848a9a;
+        font-size: 11px;
+        line-height: 16.5px;
+    }
+    @media (min-width: 576px) {
+        text-align: center;
+        align-items: center;
+        padding: 0;
+    }
 }
 
 .cardActive {
-	p {
-		color: #000;
-		font-size: 12px;
-		line-height: 18px;
-		margin-bottom: 4px;
-	}
+    p {
+        color: #000;
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 4px;
+    }
 }
 
 .groupsList {
-	position: absolute;
-	top: 8px;
-	left: 8px;
-	display: flex;
-	flex-direction: column;
-	gap: 7px;
-	img {
-		width: 12px;
-		height: 10px;
-		@media (min-width: 576px) {
-			width: 24px;
-			height: 20px;
-		}
-	}
-	@media (min-width: 576px) {
-		display: none;
-	}
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    img {
+        width: 12px;
+        height: 10px;
+        @media (min-width: 576px) {
+            width: 24px;
+            height: 20px;
+        }
+    }
+    @media (min-width: 576px) {
+        display: none;
+    }
 }
 
 .buttonGroup {
-	display: flex;
-	width: 164px;
-	border-radius: 4px;
-	background: #eff0f1;
-	margin-bottom: 12px;
+    display: flex;
+    width: 164px;
+    border-radius: 4px;
+    background: #eff0f1;
+    margin-bottom: 12px;
 }
 
 .button {
-	color: #82909f;
-	width: 100%;
-	height: 28px;
-	border: none;
-	cursor: pointer;
+    color: #82909f;
+    width: 100%;
+    height: 28px;
+    border: none;
+    cursor: pointer;
 }
 
 .activeButton {
-	color: #000;
-	background: #fff;
-	margin: 2px;
-	border-radius: 2px;
+    color: #000;
+    background: #fff;
+    margin: 2px;
+    border-radius: 2px;
 }
 
 .payButton {
-	width: 120px;
-	height: 28px;
-	border-radius: 5px;
-	color: #fff;
-	background: #e52d2d;
-	cursor: pointer;
-	border: none;
-	@media (min-width: 576px) {
-		width: 200px;
-		height: 40px;
-		font-size: 16px;
-		text-transform: uppercase;
-	}
+    width: 120px;
+    height: 28px;
+    border-radius: 5px;
+    color: #fff;
+    background: #e52d2d;
+    cursor: pointer;
+    border: none;
+    @media (min-width: 576px) {
+        width: 200px;
+        height: 40px;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
 }
 
 .price {
-	margin-bottom: 12px;
+    margin-bottom: 12px;
+}
+
+.imgSm {
+    transform: scale(0.7);
+    @media (min-width: 576px) {
+        transform: scale(0.65);
+    }
+}
+
+.imgMd {
+    transform: scale(0.85);
+    @media (min-width: 576px) {
+        transform: scale(0.75);
+    }
 }
