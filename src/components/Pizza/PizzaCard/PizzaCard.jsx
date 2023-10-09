@@ -1,35 +1,57 @@
 import { useState } from 'react';
 import { groupPizza } from '../../../utils/groupPizza';
+import { useResize } from '../../../hooks/useResize';
+import { SizePizza } from './SizePizza';
+
 import classes from './PizzaCard.module.scss';
 
+const buttons = [{ value: 20 }, { value: 30 }, { value: 40 }];
+
 export const PizzaCard = ({ name, composition, price, type, img }) => {
+	const { isScreenSm } = useResize();
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const currentGroups = groupPizza.filter((el) => type.includes(el.type));
 	const currentPrice = price[currentIndex];
 	return (
 		<div className={classes.wrapper}>
-			<span className={classes.imgsWrapper}>
-				<img src={img} alt={name} className={classes.pizzaImg} />
-				<span className={classes.groupsList}>
-					{currentGroups.map((el) => (
-						<img src={el.img} alt={el.title} />
-					))}
-				</span>
+			<span className={classes.groupsList}>
+				{currentGroups.map((el) => (
+					<img src={el.img} alt={el.title} />
+				))}
 			</span>
-			<div>
-				<h3>{name}</h3>
+			<span className={classes.imgsWrapper}>
+				<SizePizza />
+				<img src={img} alt={name} className={classes.pizzaImg} />
+			</span>
+			<div className={classes.pizzaInfo}>
+				<h3 className={classes.name}>{name}</h3>
 				<p>{composition}</p>
-				<div>
-					<p>размер, см:</p>
+				<div className={classes.cardActive}>
+					<p>Размер, см:</p>
 					<div className={classes.buttonGroup}>
-						<button className={`${classes.activeButton} ${classes.button}`}>
-							20
-						</button>
-						<button className={classes.button}>30</button>
-						<button className={classes.button}>40</button>
+						{buttons.map((el, index) => (
+							<button
+								className={
+									index === currentIndex
+										? `${classes.activeButton} ${classes.button}`
+										: `${classes.button}`
+								}
+								key={el.value}
+								onClick={() => setCurrentIndex(index)}
+							>
+								{el.value}
+							</button>
+						))}
 					</div>
 				</div>
-				<button className={classes.payButton}>от {currentPrice} руб.</button>
+				{isScreenSm ? (
+					<>
+						<h3 className={classes.price}>от {currentPrice} руб.</h3>
+						<button className={classes.payButton}>Заказать</button>
+					</>
+				) : (
+					<button className={classes.payButton}>от {currentPrice} руб</button>
+				)}
 			</div>
 		</div>
 	);

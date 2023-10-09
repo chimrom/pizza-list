@@ -6,8 +6,10 @@
 	list-style-type: none;
 }
 
-.current svg circle {
-	fill: #e52d2d;
+.current {
+	svg circle {
+		fill: #e52d2d;
+	}
 }
 
 // .noCurrent svg circle {

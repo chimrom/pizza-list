@@ -1,0 +1,44 @@
+.select {
+	svg path {
+		fill: #e01d1d;
+	}
+	color: #e52d2d;
+}
+
+.wrapper {
+	cursor: pointer;
+}
+
+.title {
+	position: relative;
+}
+
+.imgFilter {
+	display: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -25px;
+	margin-left: auto;
+	margin-right: auto;
+	width: fit-content;
+	transform: translateY(-50%);
+	animation: ani 0.5s forwards;
+}
+
+.title:hover {
+	.imgFilter {
+		display: block;
+	}
+
+	color: #e52d2d;
+}
+
+@keyframes ani {
+	0% {
+		transform: translateY(40%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}

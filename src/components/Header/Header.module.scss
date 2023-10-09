@@ -4,11 +4,15 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 12px 16px;
+	button {
+		border: none;
+		background: none;
+	}
 }
 
-header button {
-	border: none;
-	background: none;
+.headerRight {
+	display: flex;
+	gap: 20px;
 }
 
 .logo {
@@ -18,7 +22,7 @@ header button {
 .buttonsNavBlock {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 10px;
+	gap: 16px;
 }
 
 .divider {
@@ -40,10 +44,30 @@ header button {
 	justify-content: space-between;
 	align-items: center;
 	padding: 12px 16px;
+	svg path {
+		fill: #fff;
+	}
+	@media (min-width: 576px) {
+		justify-content: end;
+		padding: 16px;
+	}
 }
 
-.topDivider svg path {
-	fill: #fff;
+.language {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 24px;
+	background: #eff0f1;
+	width: 48px;
+	height: 48px;
+	font-family: Alegreya;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: normal;
+	letter-spacing: 1px;
+	text-transform: uppercase;
 }
 
 .close {
@@ -72,12 +96,12 @@ header button {
 	margin: 0 auto;
 	width: 200px;
 	list-style-type: none;
-}
 
-.navList li {
-	text-transform: uppercase;
-	text-align: center;
-	padding: 24px 0;
+	li {
+		text-transform: uppercase;
+		text-align: center;
+		padding: 24px 0;
+	}
 }
 
 .navList li:not(:last-child) {
@@ -89,4 +113,27 @@ header button {
 	flex-direction: column;
 	align-items: center;
 	margin-bottom: 40px;
+
+	span {
+		text-align: center;
+		margin-bottom: 40px;
+		.title {
+			font-size: 12px;
+			font-weight: 700;
+			line-height: 18px;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+		}
+		.time {
+			color: #a8b0bc;
+			font-size: 12px;
+		}
+	}
+}
+
+.english {
+	font-family: Alegreya;
+	font-size: 12px;
+	line-height: normal;
+	text-transform: uppercase;
 }

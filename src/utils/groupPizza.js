@@ -8,6 +8,6 @@ export const groupPizza = [
 	{ img: imgAll, type: 0, title: 'все' },
 	{ img: imgChili, type: 1, title: 'острые' },
 	{ img: imgMeat, type: 2, title: 'мясные' },
-	{ img: imgCheese, type: 4, title: 'сырные' },
 	{ img: imgCarrot, type: 3, title: 'вегетарианские' },
+	{ img: imgCheese, type: 4, title: 'сырные' },
 ];

@@ -1,17 +1,21 @@
 import { NavLink } from 'react-router-dom';
 import { footerImgList } from '../../utils/footerImgList';
-import { Logo } from '../Logo/Logo';
 import { useResize } from '../../hooks/useResize';
+import { Logo } from '../Logo/Logo';
 
 import classes from './Footer.module.scss';
 
 export const Footer = () => {
-	const { isScreenMd, isScreenLg } = useResize();
+	const { isScreenMd, isScreenSm, isScreenLg } = useResize();
 	const numberAtWindow = () => {
 		let res = 4;
-		if (isScreenMd) {
+		if (isScreenSm) {
 			res = 6;
-		} else if (isScreenLg) {
+		}
+		if (isScreenMd) {
+			res = 8;
+		}
+		if (isScreenLg) {
 			res = 12;
 		}
 		return res;
@@ -27,11 +31,15 @@ export const Footer = () => {
 				))}
 			</section>
 			<section className={classes.bottomFooter}>
-				<NavLink to="/">
-					<Logo />
-				</NavLink>
-				<h3>+7 (918) 432-65-87</h3>
-				<p>Ежедневно с 9:00 до 23:00</p>
+				<div>
+					<NavLink to="/">
+						<Logo />
+					</NavLink>
+					<span>
+						<h3>+7 (918) 432-65-87</h3>
+						<p>Ежедневно с 9:00 до 23:00</p>
+					</span>
+				</div>
 				<p>Политика конфиденциальности</p>
 			</section>
 		</footer>

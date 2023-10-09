@@ -1,6 +1,48 @@
 @import-normalize;
 
+@font-face {
+	font-family: 'Alegreya';
+	src: url('/src/fonts/Alegreya-Bold.ttf');
+	src: url('/src/fonts/Alegreya-ExtraBold.ttf');
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('/src/fonts/Roboto-Medium.ttf');
+	src: url('/src/fonts/Roboto-Light.ttf');
+}
+
 * {
 	margin: 0;
 	padding: 0;
+	font-family: 'Roboto';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7,
+button {
+	font-family: 'Alegreya';
+}
+
+h1 {
+	color: #000;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 50px;
+	letter-spacing: 1px;
+}
+
+h2,
+h3,
+h4 {
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 25px;
 }
