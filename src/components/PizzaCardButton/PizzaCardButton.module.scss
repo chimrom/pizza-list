@@ -1,0 +1,40 @@
+.payButton {
+    width: 120px;
+    height: 28px;
+    border-radius: 5px;
+    color: #fff;
+    background: #e52d2d;
+    cursor: pointer;
+    border: none;
+    @media (min-width: 576px) {
+        width: 200px;
+        height: 40px;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+}
+
+.addButton {
+    width: 120px;
+    height: 28px;
+    border-radius: 5px;
+    color: #e52d2d;
+    border: 1px solid #e52d2d;
+    background: #fff;
+    cursor: pointer;
+    @media (min-width: 576px) {
+        width: 200px;
+        height: 40px;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    &:active {
+        background-color: #e52d2d;
+        color: #fff;
+    }
+}
+
+.price {
+    margin-bottom: 12px;
+}
