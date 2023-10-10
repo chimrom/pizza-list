@@ -1,88 +1,89 @@
 .from {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 .inputBlock {
-	margin-top: 12px;
-	width: 100%;
-	margin-bottom: 32px;
-	display: grid;
-	grid-template-rows: repeat(3, 1fr);
-	@media (min-width: 576px) {
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(2, 1fr);
-		.bigInput {
-			grid-column: span 2 / span 2;
-		}
-	}
-	column-gap: 32px;
-	row-gap: 24px;
-	input {
-		height: 44px;
-		border-radius: 4px;
-		border: 1px solid #c4c7ca;
-		background: #fff;
-		padding: 12px;
-	}
+    margin-top: 12px;
+    width: 100%;
+    margin-bottom: 32px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    @media (min-width: 576px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        .bigInput {
+            grid-column: span 2 / span 2;
+        }
+    }
+    column-gap: 32px;
+    row-gap: 24px;
+    input {
+        height: 44px;
+        border-radius: 4px;
+        border: 1px solid #c4c7ca;
+        background: #fff;
+        padding: 12px;
+    }
 
-	input::placeholder {
-		color: #a6a6a6;
-	}
+    input::placeholder {
+        color: #a6a6a6;
+    }
 }
 .radioBlock {
-	margin-top: 12px;
-	margin-bottom: 32px;
-	display: flex;
-	flex-direction: column;
-	gap: 14px;
+    margin-top: 12px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 
-	label {
-		padding-left: 8px;
-	}
+    label {
+        padding-left: 8px;
+    }
 }
 
-input[type='radio']:after {
-	width: 15px;
-	height: 15px;
-	border-radius: 15px;
-	top: -2px;
-	left: -1px;
-	position: relative;
-	background-color: #fff;
-	content: '';
-	display: inline-block;
-	visibility: visible;
-	border: 1px solid #c4c7ca;
+input[type="radio"]:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #fff;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid #c4c7ca;
 }
 
-input[type='radio']:checked:after {
-	width: 15px;
-	height: 15px;
-	border-radius: 15px;
-	top: -2px;
-	left: -1px;
-	position: relative;
-	background-color: #e52d2d;
-	content: '';
-	display: inline-block;
-	visibility: visible;
+input[type="radio"]:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #e52d2d;
+    border: 1px solid #e52d2d;
+    content: "";
+    display: inline-block;
+    visibility: visible;
 }
 
 .submitButton {
-	width: 240px;
-	height: 52px;
-	color: #fff;
-	border-radius: 5px;
-	border: none;
-	cursor: pointer;
-	background: #e52d2d;
-	font-size: 18px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	margin-bottom: 23px;
+    width: 240px;
+    height: 52px;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background: #e52d2d;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 23px;
 }
 
 small {
-	color: #848a9a;
+    color: #848a9a;
 }
