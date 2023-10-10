@@ -4,15 +4,24 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 12px 16px;
+	max-width: 1312px;
+
 	button {
 		border: none;
 		background: none;
+	}
+	@media (min-width: 1312px) {
+		width: 100%;
+		margin: 0 auto;
 	}
 }
 
 .headerRight {
 	display: flex;
 	gap: 20px;
+	@media (min-width: 768px) {
+		gap: 32px;
+	}
 }
 
 .logo {
@@ -23,6 +32,9 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: 16px;
+	@media (min-width: 768px) {
+		gap: 32px;
+	}
 }
 
 .divider {
@@ -37,6 +49,7 @@
 	min-height: 100vh;
 	background: #313945;
 	color: #fff;
+	z-index: 99;
 }
 
 .topDivider {
@@ -97,14 +110,19 @@
 	width: 200px;
 	list-style-type: none;
 
-	li {
+	.menuItem {
 		text-transform: uppercase;
 		text-align: center;
 		padding: 24px 0;
+		color: #fff;
+		text-decoration: none;
+	}
+	.active {
+		color: #e52d2d;
 	}
 }
 
-.navList li:not(:last-child) {
+.navList .menuItem:not(:last-child) {
 	border-bottom: solid 1px #1d2228;
 }
 

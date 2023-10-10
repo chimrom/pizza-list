@@ -1,0 +1,16 @@
+.notFound {
+	text-align: center;
+	padding: 30px 0;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	h2 {
+		display: flex;
+		justify-content: end;
+		padding-right: 30px;
+	}
+}

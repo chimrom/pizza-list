@@ -9,8 +9,13 @@ export const EventList = () => {
 
 	return (
 		<section className={classes.wrapper}>
-			{events.map((el) => (
-				<EventCard title={el.title} img={el.img} description={el.description} />
+			{events.map((el, index) => (
+				<EventCard
+					title={el.title}
+					img={el.img}
+					description={el.description}
+					key={index}
+				/>
 			))}
 		</section>
 	);

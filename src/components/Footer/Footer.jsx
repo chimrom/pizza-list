@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { footerImgList } from '../../utils/footerImgList';
 import { useResize } from '../../hooks/useResize';
 import { Logo } from '../Logo/Logo';
@@ -7,6 +7,7 @@ import classes from './Footer.module.scss';
 
 export const Footer = () => {
 	const { isScreenMd, isScreenSm, isScreenLg } = useResize();
+	const { pathname } = useLocation();
 	const numberAtWindow = () => {
 		let res = 4;
 		if (isScreenSm) {
@@ -23,13 +24,18 @@ export const Footer = () => {
 	const currentNumber = numberAtWindow();
 	return (
 		<footer>
-			<h2>Следите за нами в Instagram</h2>
-			<h4>@pizzamenu</h4>
-			<section className={classes.imgList}>
-				{footerImgList.slice(0, currentNumber).map((el) => (
-					<img src={el.img} alt={el.id + 'картинка'} key={el.id} />
-				))}
-			</section>
+			{pathname === '/about' ? (
+				<>
+					<h2>Следите за нами в Instagram</h2>
+					<h4>@pizzamenu</h4>
+					<section className={classes.imgList}>
+						{footerImgList.slice(0, currentNumber).map((el) => (
+							<img src={el.img} alt={el.id + 'картинка'} key={el.id} />
+						))}
+					</section>
+				</>
+			) : null}
+
 			<section className={classes.bottomFooter}>
 				<div>
 					<NavLink to="/">
